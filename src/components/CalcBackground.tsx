@@ -1,6 +1,6 @@
 import { CalcButtons } from "./CalcButons"
 
-export function CalcScreen() {
+export function CalcBackground() {
     return(
         <>
             <div className="calcScreen">

@@ -20,6 +20,14 @@
   background-color: rgb(132, 187, 143);
 }
 
+.active {
+  background: rgb(42, 108, 42);
+}
+
+.active:hover{
+  background: rgb(17, 60, 17);
+}
+
 .calcScreen {
   margin: auto;
   height: 80px;

@@ -1,5 +1,5 @@
 import { CalcButtons } from "./CalcButons";
-import { CalcScreen } from "./CalcScreen";
+import { CalcBackground } from "./CalcBackground";
 
 export function CalcWrapper() {
     return (
