@@ -127,43 +127,49 @@ export function CalcButtons() {
 
     return(
         <>
-        <div className="calcScreen">
-            <p className="calcNum">{screenNumber}</p>
+        <div className="calcWhole">
+            <div>
+                <h1>A Simple<br/>Calculator</h1>
+                <h4>by: Moonlite-S</h4>
+            </div>
+            <div className="calcScreen">
+                <p className="calcNum">{screenNumber}</p>
+            </div>
+            <table>
+                <thead>
+                <tr>
+                    <td><button className="calcButton" onClick={() => AddToScreenNumber('1')}>1</button></td>
+                    <td><button className="calcButton" onClick={() => AddToScreenNumber('2')}>2</button></td>
+                    <td><button className="calcButton" onClick={() => AddToScreenNumber('3')}>3</button></td>
+                    <td><button className={state.divi} onClick={() => {OperatorModifier('÷'); ActiveState('divi');}}>÷</button></td>
+                </tr>
+                <tr>
+                    <td><button className="calcButton" onClick={() => AddToScreenNumber('4')}>4</button></td>
+                    <td><button className="calcButton" onClick={() => AddToScreenNumber('5')}>5</button></td>
+                    <td><button className="calcButton" onClick={() => AddToScreenNumber('6')}>6</button></td>
+                    <td><button className={state.mul} onClick={() => {OperatorModifier('*'); ActiveState('mul');}}>*</button></td>
+                </tr>
+                <tr>
+                    <td><button className="calcButton" onClick={() => AddToScreenNumber('7')}>7</button></td>
+                    <td><button className="calcButton" onClick={() => AddToScreenNumber('8')}>8</button></td>
+                    <td><button className="calcButton" onClick={() => AddToScreenNumber('9')}>9</button></td>
+                    <td><button className={state.add} onClick={() => {OperatorModifier('+'); ActiveState('add');}}>+</button></td>
+                </tr>
+                <tr>
+                    <td><button className="calcButton" onClick={() => AddToScreenNumber('.')}>.</button></td>
+                    <td><button className="calcButton" onClick={() => AddToScreenNumber('0')}>0</button></td>
+                    <td><button className="calcButton" onClick={() => AddToScreenNumber('1')}>%</button></td>
+                    <td><button className={state.sub} onClick={() => {OperatorModifier('-'); ActiveState('sub');}}>-</button></td>
+                </tr>
+                <tr>
+                    <td><button className="calcButton" onClick={SignedNumber}>+/-</button></td>
+                    <td><button className="calcButton" onClick={ClearAll}>c</button></td>
+                    <td><button className="calcButton"></button></td>
+                    <td><button className="calcButton" onClick={Equals}>=</button></td>
+                </tr>
+                </thead>
+            </table>
         </div>
-        <table>
-            <thead>
-            <tr>
-                <td><button className="calcButton" onClick={() => AddToScreenNumber('1')}>1</button></td>
-                <td><button className="calcButton" onClick={() => AddToScreenNumber('2')}>2</button></td>
-                <td><button className="calcButton" onClick={() => AddToScreenNumber('3')}>3</button></td>
-                <td><button className={state.divi} onClick={() => {OperatorModifier('÷'); ActiveState('divi');}}>÷</button></td>
-            </tr>
-            <tr>
-                <td><button className="calcButton" onClick={() => AddToScreenNumber('4')}>4</button></td>
-                <td><button className="calcButton" onClick={() => AddToScreenNumber('5')}>5</button></td>
-                <td><button className="calcButton" onClick={() => AddToScreenNumber('6')}>6</button></td>
-                <td><button className={state.mul} onClick={() => {OperatorModifier('*'); ActiveState('mul');}}>*</button></td>
-            </tr>
-            <tr>
-                <td><button className="calcButton" onClick={() => AddToScreenNumber('7')}>7</button></td>
-                <td><button className="calcButton" onClick={() => AddToScreenNumber('8')}>8</button></td>
-                <td><button className="calcButton" onClick={() => AddToScreenNumber('9')}>9</button></td>
-                <td><button className={state.add} onClick={() => {OperatorModifier('+'); ActiveState('add');}}>+</button></td>
-            </tr>
-            <tr>
-                <td><button className="calcButton" onClick={() => AddToScreenNumber('.')}>.</button></td>
-                <td><button className="calcButton" onClick={() => AddToScreenNumber('0')}>0</button></td>
-                <td><button className="calcButton" onClick={() => AddToScreenNumber('1')}>%</button></td>
-                <td><button className={state.sub} onClick={() => {OperatorModifier('-'); ActiveState('sub');}}>-</button></td>
-            </tr>
-            <tr>
-                <td><button className="calcButton" onClick={SignedNumber}>+/-</button></td>
-                <td><button className="calcButton" onClick={ClearAll}>c</button></td>
-                <td><button className="calcButton"></button></td>
-                <td><button className="calcButton" onClick={Equals}>=</button></td>
-            </tr>
-            </thead>
-        </table>
         </>
     )
 }
