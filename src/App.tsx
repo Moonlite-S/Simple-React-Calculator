@@ -1,11 +1,11 @@
 import './App.css'
-import { CalcWrapper } from './components/CalcWrapper'
+import { CalcButtons } from './components/CalcButtons'
 
 function App() {
   return (
     <>
-      <div>
-        <CalcWrapper />
+      <div className='calcBG'>
+        <CalcButtons />
       </div>
     </>
   )

@@ -128,7 +128,7 @@ export function CalcButtons() {
     return(
         <>
         <div className="calcScreen">
-            <p>{screenNumber}</p>
+            <p className="calcNum">{screenNumber}</p>
         </div>
         <table>
             <thead>

@@ -30,9 +30,21 @@
 
 .calcScreen {
   margin: auto;
-  height: 80px;
+  height: 55px;
   width: 292px;
   background-color: white;
   color: black;
   font-size: 18px;
+}
+
+.calcNum {
+  font-family: monospace;
+  font-size: 40px;
+  text-align: right;
+  margin: 10px;
+  overflow: hidden;
+}
+
+.calcBG {
+  background: red;
 }
